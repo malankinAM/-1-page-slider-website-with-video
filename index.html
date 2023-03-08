@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.css"
+        integrity="sha512-72McA95q/YhjwmWFMGe8RI3aZIMCTJWPBbV8iQY3jy1z9+bi6+jHnERuNrDPo/WGYEzzNs4WdHNyyEr/yXJ9pA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <a href="#" class="brand">I love Frontend</a>
+        <div class="navigation">
+            <a href="#">Home</a>
+            <a href="#">Service</a>
+            <a href="#">About</a>
+            <a href="#">Contacts</a>
+            <a href="#">Portfolio</a>
+        </div>
+    </header>
+
+    <section class="home">
+        <video src="6.mp4" muted autoplay loop class="video-slider active"></video>
+        <video src="2.mp4" muted autoplay loop class="video-slider"></video>
+        <video src="3.mp4" muted autoplay loop class="video-slider"></video>
+        <video src="4.mp4" muted autoplay loop class="video-slider"></video>
+        <video src="5.mp4" muted autoplay loop class="video-slider"></video>
+        <div class="content active">
+            <h1>Frontend<br><span>Developer</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat doloribus architecto, nisi repellendus
+                dicta nobis asperiores ut adipisci recusandae commodi! Itaque non voluptates cumque velit!</p>
+            <a href="#">Read vore</a>
+        </div>
+
+        <div class="content">
+            <h1>Web<br><span>Developer</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat doloribus architecto, nisi repellendus
+                dicta nobis asperiores ut adipisci recusandae commodi! Itaque non voluptates cumque velit!</p>
+            <a href="#">Read vore</a>
+        </div>
+
+        <div class="content">
+            <h1>Seo<br><span>Special</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat doloribus architecto, nisi repellendus
+                dicta nobis asperiores ut adipisci recusandae commodi! Itaque non voluptates cumque velit!</p>
+            <a href="#">Read vore</a>
+        </div>
+
+        <div class="content">
+            <h1>JavaScript<br><span>Developer</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat doloribus architecto, nisi repellendus
+                dicta nobis asperiores ut adipisci recusandae commodi! Itaque non voluptates cumque velit!</p>
+            <a href="#">Read vore</a>
+        </div>
+        <div class="content">
+            <h1>React<br><span>Developer</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat doloribus architecto, nisi repellendus
+                dicta nobis asperiores ut adipisci recusandae commodi! Itaque non voluptates cumque velit!</p>
+            <a href="#">Read vore</a>
+        </div>
+
+        <div class="media-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+
+        <div class="slider-navigation">
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+
+    <script>
+        // javascript vidos
+        const btns = document.querySelectorAll('.nav-btn');
+        const slides = document.querySelectorAll('.video-slider');
+        const contents = document.querySelectorAll('.content');
+
+        var sliderNav = function(index){
+            btns.forEach((btn) =>{
+                btn.classList.remove('active');
+            });
+
+            slides.forEach((slide) =>{
+                slide.classList.remove('active');
+            });
+
+            contents.forEach((content) =>{
+                content.classList.remove('active');
+            });
+
+            btns[index].classList.add('active');
+            slides[index].classList.add('active');
+            contents[index].classList.add('active')
+        } 
+
+        btns.forEach((btn,i)=>{
+            btn.addEventListener('click', () =>{
+                sliderNav(i);
+            })
+        })
+    </script>
+
+</body>
+
+</html>
